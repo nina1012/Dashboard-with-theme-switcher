@@ -217,3 +217,40 @@ body.dark-mode .button {
 
 .card.instagram {
   border-image: linear-gradient(var(--instagram-orange), var(--instagram-pink) 10% stretch); }
+
+@media only screen and (max-width: 1200px) and (min-width: 681px) {
+  html {
+    font-size: 60%; }
+  .container {
+    max-width: 60%; }
+  .cards {
+    grid-template-columns: repeat(2, minmax(var(--card-min-width), var(--card-max-width))); }
+  .today {
+    grid-template-columns: none; } }
+
+@media only screen and (max-width: 680px) and (min-width: 300px) {
+  html {
+    font-size: 55%; }
+  .container {
+    max-width: 90%; }
+  hr {
+    display: block;
+    background-color: var(--very-light-theme-text);
+    width: 100%;
+    margin: 2rem 0;
+    height: 3px; }
+  .toggle {
+    flex-direction: column;
+    align-items: flex-start; }
+    .toggle > .toggle__div {
+      width: 100%;
+      justify-content: space-between; }
+  .cards,
+  .today,
+  .media-row {
+    grid-template-columns: none; }
+  .media-row,
+  .today {
+    grid-gap: calc(var(--gap) / 2); }
+  .row {
+    justify-content: initial; } }
