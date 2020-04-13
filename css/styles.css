@@ -1,0 +1,96 @@
+:root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-red: hsl(356, 69%, 56%);
+  --facebook: hsl(195, 100%, 50%);
+  --twitter: hsl(203, 89%, 53%);
+  --youtube: hsl(348, 97%, 39%);
+  --light-toggle: hsl(230, 22%, 74%);
+  --light-bg: hsl(0, 0%, 100%);
+  --light-top-bg: hsl(225, 100%, 98%);
+  --light-card-bg: hsl(227, 47%, 96%);
+  --light-theme-text: hsl(228, 12%, 44%);
+  --very-light-theme-text: hsl(230, 17%, 14%);
+  --thin: 400;
+  --thick: 700;
+  --font: 'Inter', sans-serif;
+  --container-max-width: 80vw;
+  --container-width: 120rem;
+  --card-max-width: 33rem;
+  --card-min-width: 22rem;
+  --gap: 5rem; }
+
+body.dark-mode {
+  --light-bg: hsl(230, 17%, 14%);
+  --light-top-bg: hsl(232, 19%, 15%);
+  --light-card-bg: hsl(228, 28%, 20%);
+  --light-theme-text: hsl(228, 34%, 66%);
+  --very-light-theme-text: white;
+  --light-toggle: linear-gradient(
+    to right,
+    hsl(210, 78%, 56%) to hsl(146, 68%, 55%)
+  ); }
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: var(--font); }
+
+body {
+  background-color: var(--light-bg);
+  position: relative; }
+
+.container {
+  max-width: var(--container-max-width);
+  width: var(--container-width);
+  margin: auto;
+  padding: 5rem 0; }
+
+.bg-top {
+  position: absolute;
+  min-height: 20rem;
+  height: 26rem;
+  width: 100%;
+  background-color: var(--light-top-bg);
+  z-index: -1;
+  border: 1px solid transparent;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.bold {
+  color: var(--light-theme-text);
+  font-weight: var(--thick);
+  font-size: 1.5rem; }
+
+.dark {
+  color: var(--very-light-theme-text);
+  font-weight: var(--thick); }
+
+.number {
+  font-size: 2.4rem; }
+
+.plus {
+  color: var(--lime-green); }
+
+.minus {
+  color: var(--bright-red);
+  font-weight: var(--thick); }
+
+h1.bold {
+  font-size: 2rem;
+  margin-bottom: 2rem; }
+  body.dark-mode h1.bold {
+    color: var(--very-light-theme-text); }
+
+hr {
+  display: none; }
