@@ -168,3 +168,52 @@ body.dark-mode .button {
 
 #toggle__btn:checked + .button::before {
   left: 0.5rem; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(var(--card-min-width), var(--card-max-width)));
+  grid-gap: var(--gap);
+  margin-bottom: 5rem; }
+
+.card {
+  max-height: 35rem;
+  height: 25rem;
+  background-color: var(--light-card-bg);
+  text-align: center;
+  border-top-width: 4px;
+  border-top-style: solid;
+  border-radius: 5px;
+  padding: 2rem 5rem;
+  display: grid;
+  overflow: hidden; }
+  .card > .media-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .card > .media-icon > .username {
+      margin-left: 1rem; }
+  .card .follower {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    .card .follower .number-followers {
+      font-size: 5.5rem; }
+    .card .follower .followers {
+      color: var(--light-theme-text);
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      letter-spacing: 3px; }
+  .card .stats {
+    display: flex;
+    justify-content: center; }
+    .card .stats > * {
+      font-size: 1.5rem;
+      font-weight: var(--thick);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .card .stats img[src^='images/icon-'] {
+      margin-right: 0.5rem; }
+
+.card.instagram {
+  border-image: linear-gradient(var(--instagram-orange), var(--instagram-pink) 10% stretch); }
